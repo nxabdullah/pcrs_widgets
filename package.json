@@ -1,0 +1,23 @@
+{
+  "name": "pcrs_widgets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nxabdullah/pcrs_widgets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nxabdullah/pcrs_widgets/issues"
+  },
+  "homepage": "https://github.com/nxabdullah/pcrs_widgets#readme",
+  "dependencies": {
+    "bulma": "^0.9.4",
+    "bulma-start": "^0.0.5"
+  }
+}

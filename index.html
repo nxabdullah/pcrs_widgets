@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <section class="section">
+        <div class="container">
+          <h1 class="title">
+            PCRS Widgets
+          </h1>
+          <p class="subtitle">
+            This is a <strong>static</strong> webpage that that contains many PCRS Widgets.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+          <div class="container">
+            <div class="card" id="multiple_choice-2">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    {{Problem Title}}
+                  </p>
+                <span id="score-multiple_choice-2">0/0</span>
+                  <button class="card-header-icon" aria-label="more options">
+                    <span class="icon">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </header>
+                <div class="card-content">
+                  <div class="content">
+
+                    <fieldset>
+                        <div id="div_id_options" class="control-group">
+                            <div class="controls">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <a class="card-footer-item" id="submit-id-submit">Submit</a>
+                </footer>
+              </div>
+
+          </div>
+      </section>
+
+	<script src="index.js"></script>
+  </body>
+</html>
