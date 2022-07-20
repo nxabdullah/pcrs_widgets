@@ -23,12 +23,16 @@
 
       <section class="section">
           <div class="container">
+            <!-- Problem MCQ with ID 2 required HTML-->
             <div class="card" id="multiple_choice-2">
                 <header class="card-header">
                   <p class="card-header-title">
-                    {{Problem Title}}
+                    <span id="title-multiple_choice-2">{{title}}</span>
                   </p>
-                <span id="score-multiple_choice-2">0/0</span>
+                    <span id="score-multiple_choice-2"
+                        style="margin-top:10px; font-weight: bold;">
+                        0/0
+                    </span>
                   <button class="card-header-icon" aria-label="more options">
                     <span class="icon">
                       <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -51,9 +55,46 @@
                   <a class="card-footer-item" id="submit-id-submit">Submit</a>
                 </footer>
               </div>
-
           </div>
       </section>
+
+      <section class="section">
+          <div class="container">
+            <!-- Problem MCQ with ID 1 Required HTML -->
+            <div class="card" id="multiple_choice-1">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    <span id="title-multiple_choice-1">{{title}}</span>
+                  </p>
+                    <span id="score-multiple_choice-1"
+                        style="margin-top:10px; font-weight: bold;">
+                        0/0
+                    </span>
+                  <button class="card-header-icon" aria-label="more options">
+                    <span class="icon">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </header>
+                <div class="card-content">
+                  <div class="content">
+
+                    <fieldset>
+                        <div id="div_id_options" class="control-group">
+                            <div class="controls">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <a class="card-footer-item" id="submit-id-submit">Submit</a>
+                </footer>
+              </div>
+          </div>
+      </section>
+
 
 	<script src="index.js"></script>
   </body>

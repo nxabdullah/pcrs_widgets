@@ -27,18 +27,19 @@ function render_problem(id) {
     problem = get_json(id)
 
     // add title
-    title = document.querySelector("#multiple_choice-2 .card-header-title");
+    title = document.querySelector("#title-multiple_choice-" + id);
     title.innerHTML = problem.name;
 
     // add all options
     options = problem.answer_options;
     for (i = 0; i < options.length; i++){
-        document.querySelector("#multiple_choice-2 #div_id_options")
+        document.querySelector("#multiple_choice-" + id +  " #div_id_options")
             .innerHTML += get_option_html(options[i]) + "<br><br>";
     }
 
     // add score
-
+    document.querySelector("#score-multiple_choice-" + id)
+        .innerHTML = "0 / " + problem.max_score;
 }
 
 
@@ -46,6 +47,5 @@ function render_problem(id) {
 
 
 // Dom
-console.log(get_json(2));
-console.log(get_json(1));
 render_problem(2);
+render_problem(1)
