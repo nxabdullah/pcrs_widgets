@@ -41,6 +41,12 @@ function get_json(id) {
     const url = API_URL + "/problems/multiple_choice/" + String(id) + "/get_json"
     Http.open("get", url, false);
     Http.withCredentials = true;
+
+    // Important.
+    if (session_id != '') {
+        Http.setRequestHeader('sessionid', session_id)
+    }
+
     Http.send();
 
     if (Http.status === 200) {
@@ -85,7 +91,8 @@ function render_problem(id) {
     loginstat = document.querySelector("#login-status-multiple-choice-" + id);
 
     // Doesn't really make sense to warn them until we figure out sync
-    //loginstat.innerHTML = "<strong>Warning:</strong> You are not logged in. Would you like to login and save your progress? <br> <strong>Debug:</strong> The username is: " + problem.user;
+    //loginstat.innerHTML = "<strong>Warning:</strong> You are not logged in. Would you like to login and save your progress?";
+    loginstat.innerHTML = "<strong>Warning:</strong> You are not logged in, your submissions are anonymously recorded.";
 
     // add title
     title = document.querySelector("#title-multiple_choice-" + id);
