@@ -10,6 +10,9 @@ if (typeof(Storage) !== "undefined") {
     if (!localStorage.getItem('session_id')) {
         session = establish_pseudo_session();
         localStorage.setItem('session_id', session.session_id);
+        localStorage.setItem('user', session.user_name);
+        session_id = session.session_id;
+        user_name = session.user_name;
         console.log("Setting your first session id!")
     } else {
         session_id = localStorage.getItem('session_id');
