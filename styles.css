@@ -1,3 +1,10 @@
 html {
     background-color: rgba(255, 249, 243, 0.61);
 }
+
+span.score {
+    font-size: 17px;
+    vertical-align: middle;
+    margin-top:10px;
+    font-weight: 600;
+  }

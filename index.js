@@ -92,7 +92,7 @@ function render_problem(id) {
 
     // Doesn't really make sense to warn them until we figure out sync
     //loginstat.innerHTML = "<strong>Warning:</strong> You are not logged in. Would you like to login and save your progress?";
-    loginstat.innerHTML = "<strong>Warning:</strong> You are not logged in, your submissions are anonymously recorded.";
+    loginstat.innerHTML = "<strong>Warning:</strong> You are not logged in. Your submissions are not being recorded to your student account.";
 
     // add title
     title = document.querySelector("#title-multiple_choice-" + id);
@@ -110,8 +110,18 @@ function render_problem(id) {
     }
 
     // add score
-    document.querySelector("#score-multiple_choice-" + id)
-        .innerHTML = "0 / " + problem.max_score;
+    score = 0;
+    if (problem.best_score) {
+        score = problem.best_score;
+    }
+
+    if (problem.best_score == problem.max_score){
+        document.querySelector("#score-multiple_choice-" + id)
+        .innerHTML = "✅";
+    } else {
+        document.querySelector("#score-multiple_choice-" + id)
+        .innerHTML = score + " / " + problem.max_score;
+    }
 }
 
 

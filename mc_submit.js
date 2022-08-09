@@ -272,12 +272,17 @@ function submit_mc(submission, problem_pk, div_id) {
                 'options': options_list
             }
 
-            $("#score-multiple_choice-" + problem_pk).text(score + " / " + max_score)
+            if (is_correct) {
+                $("#score-multiple_choice-" + problem_pk).text("✅")
+            } else {
+                $("#score-multiple_choice-" + problem_pk).text(score + " / " + max_score)
+            }
+
 
 
             if (data['best'] && !data['past_dead_line']){
                 //update_marks(div_id, score, max_score);
-                $("#score-multiple_choice-" + problem_pk).text(score + " / " + max_score)
+                //$("#score-multiple_choice-" + problem_pk).text(score + " / " + max_score)
             }
 
             //var flag = ($('#'+div_id).find('#history_accordion').children().length != 0);
