@@ -203,7 +203,7 @@ function submit_mc(submission, problem_pk, div_id) {
         beforeSend: (xhr) => {
             //xhr.setRequestHeader('X-CSRFToken', csrftoken)
             //xhr.setRequestHeader('csrftoken', csrftoken)
-            xhr.setRequestHeader('sessionid', session_id)
+            xhr.setRequestHeader('anon', user_name)
             xhr.withCredentials = true;
         },
         success: (data) => {

@@ -13,9 +13,11 @@ if (typeof(Storage) !== "undefined") {
         localStorage.setItem('user', session.user_name);
         session_id = session.session_id;
         user_name = session.user_name;
+        console.log(session)
         console.log("Setting your first session id!")
     } else {
         session_id = localStorage.getItem('session_id');
+        user_name = localStorage.getItem('user')
         console.log("Loading your previous session id!")
     }
 } else {
@@ -33,6 +35,7 @@ function establish_pseudo_session() {
 
     if (Http.status === 200) {
         session = JSON.parse(Http.responseText);
+        print(session)
         return session
     }
 
@@ -47,7 +50,7 @@ function get_json(id) {
 
     // Important.
     if (session_id != '') {
-        Http.setRequestHeader('sessionid', session_id)
+        Http.setRequestHeader('anon', user_name)
     }
 
     Http.send();
