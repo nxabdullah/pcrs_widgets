@@ -31,9 +31,12 @@ Minor configurations are required inside of the PCRS server the client will conn
 	# We will use sessionid header to send the session key
 	# back to the server (since cookies are not allowed). 
 	CORS_EXPOSE_HEADERS = ['Content-Type']
-	CORS_ALLOW_HEADERS = list(default_headers) + ['sessionid']
+	CORS_ALLOW_HEADERS = list(default_headers) + ['sessionid'] + ['anon']
 
 	```
+	
+	Please make sure to import the following `from corsheaders.defaults import default_headers`
+	
 
 
 That's all! Your PCRS server is now CORS configured :sunglasses:
